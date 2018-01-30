@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-default {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.d-table {
+    display: table;
+    width: 100%;
+}
+
+.d-cell {
+    display: table-cell;
+    vertical-align: bottom;
+}

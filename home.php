@@ -29,7 +29,7 @@ get_header(); ?>
                     <?php endif; ?>
                 </ul>
             </div>
-            <a href="#" class="main-btn banner-section-btn">Read more</a>
+            <a href="#" class="btn btn-banner-section">Read more</a>
         </div>
     </div>
 </section>
@@ -48,7 +48,7 @@ get_header(); ?>
                         </div>
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <p><?php the_excerpt(); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="main-btn btn-section-news">Read more</a>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-section-news">Read more</a>
                     </li>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>

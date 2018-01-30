@@ -1,0 +1,44 @@
+.form-group {
+    border: 1px solid #d1d2d2;
+    border-radius: 100px;
+    max-width: 510px;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    input {
+        font: 400 18px/1.67 $secondary-font;
+        color: $primary-color;
+        width: calc(100% - 215px);
+        padding: 11px 0 11px 36px;
+        display: block;
+        border: transparent;
+        background: transparent;
+    }
+    .btn-inform-section {
+        padding: 12px 73px;
+        background: $light-bg;
+        color: $warm-color-btn;
+        position: absolute;
+        right: -1px;
+        bottom: 0;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: #f3f4f6;
+}
+
+::-moz-placeholder {
+    color: #f3f4f6;
+}
+
+:-ms-input-placeholder {
+    color: #f3f4f6;
+}
+
+:-moz-placeholder {
+    color: #f3f4f6;
+}
+
+
+

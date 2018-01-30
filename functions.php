@@ -93,12 +93,7 @@ function panakeia_scripts()
 
 
 //    my styles
-    wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css' );
-    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css' );
-
-
-//    wp_enqueue_script('panakeia-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true);
-//    wp_enqueue_script('panakeia-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true);
+    wp_enqueue_style('style', get_template_directory_uri() . '/css/main.css' );
 }
 
 add_action('wp_enqueue_scripts', 'panakeia_scripts');

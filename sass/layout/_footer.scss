@@ -1,0 +1,45 @@
+.bg-footer-warm {
+    background: $secondary-bg;
+    padding: 95px 0 85px;
+    .link-item-list {
+        @include list-base;
+        display: inline-block;
+        vertical-align: top;
+        width: 33%;
+        li {
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 18px;
+            @include transition(.35s);
+            &:hover {
+                text-decoration: underline;
+                color: $primary-bg;
+            }
+        }
+    }
+}
+
+.bg-footer-second {
+    background: url(../img/kitchen.jpg) no-repeat center;
+    width: 100%;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 385px;
+    text-align: center;
+    padding: 85px 0;
+    font-size: 18px;
+    color: $primary-color;
+    p {
+        max-width: 666px;
+        margin: 0 auto;
+        padding: 0;
+        span {
+            font-weight: 700;
+        }
+    }
+}
+

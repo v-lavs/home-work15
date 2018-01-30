@@ -1,0 +1,44 @@
+.btn {
+    display: inline-block;
+    font: 400 18px/1.67 $secondary-font;
+    padding: 12px 59px;
+    border-radius: 100px;
+    text-decoration: none;
+    margin: 0 auto;
+    @include appearance (none);
+    border: none;
+    @include transition(.35s);
+    outline: none;
+    &:hover {
+        @include opacity(.7);
+    }
+    &:focus {
+        @include opacity(.7);
+    }
+    &-banner-section {
+        color: $warm-color-btn;
+        background-color: $light-bg;
+    }
+    &-section-news {
+        color: $dark-color-btn;
+        background: $light-bg;
+        font-size: 10px;
+        padding: 12px 51px;
+        transition: 0.35s;
+        &:hover {
+            color: $dark-color;
+            background: $light-grey-bg;
+        }
+    }
+    &-item-danger {
+        color: #ffffff;
+        background: #dd4b2b;
+        padding: 12px 75px
+    }
+    &-item-info {
+        color: #ffffff;
+        background: #4b4e73;
+        padding: 12px 75px
+    }
+
+}

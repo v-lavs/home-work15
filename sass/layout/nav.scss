@@ -1,0 +1,30 @@
+.nav-main {
+    font: 400 18px/1.33 $secondary-font;
+    ul {
+        @include list-base;
+    }
+    li {
+        list-style-type: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        color: $secondary-color;
+        line-height: 1.33;
+        padding: 15px 21px;
+        border: 1px solid transparent;
+        @include border-radius (100px);
+        @include transition(.35s);
+        &:hover {
+            color: $primary-bg;
+            background: $danger-bg;
+        }
+        &:focus {
+            color: $primary-bg;
+            background: $danger-bg;
+            outline: none;
+        }
+    }
+}
