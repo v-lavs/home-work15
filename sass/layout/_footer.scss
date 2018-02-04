@@ -1,5 +1,5 @@
 .bg-footer-warm {
-    background: $secondary-bg;
+    //background: $secondary-bg;
     padding: 95px 0 85px;
     .link-item-list {
         @include list-base;
@@ -23,7 +23,9 @@
 }
 
 .bg-footer-second {
-    background: url(../img/kitchen.jpg) no-repeat center;
+    //background: url(../img/kitchen.jpg) no-repeat center;
+    //background-repeat: no-repeat;
+    //background-position: center;
     width: 100%;
     overflow: hidden;
     -webkit-background-size: cover;

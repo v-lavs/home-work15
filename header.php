@@ -37,11 +37,11 @@
         <?php endif; ?>
 
         <?php wp_nav_menu(array(
-            'theme_location' => 'header-menu',
+            'theme_location' => 'top_menu',
             'container' => '',
             'menu_class' => 'nav-main'
-
         )) ?>
+
     </div>
 </header>
 <div class="content">

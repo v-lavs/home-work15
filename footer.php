@@ -14,7 +14,7 @@
 </div><!-- #content -->
 
 <footer>
-    <div class="bg-footer-warm">
+    <div class="bg-footer-warm" style="background-color: <?php echo get_theme_mod('bg-footer-warm'); ?>;">
         <div class="container container-default">
 
             <ul class="link-item-list">
@@ -55,7 +55,8 @@
             </ul>
         </div>
     </div>
-    <div class="bg-footer-second" style="background: url('<?php bloginfo('template_url')?>/assets/img/kitchen.jpg') no-repeat center/cover">
+
+    <div class="bg-footer-second" style="background: url(<?php echo get_theme_mod('bg-img-footer'); ?>;) no-repeat center/cover">
         <div class="container container-default">
             <?php
             if (is_active_sidebar('footer-sidebar')) { ?>

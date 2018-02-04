@@ -1,5 +1,5 @@
 .banner-section {
-    background: url(../img/cafe.jpg) no-repeat center;
+    //background: url(../img/cafe.jpg) no-repeat center;
     overflow: hidden;
     height: 1321px;
     background-size: cover;
@@ -152,7 +152,13 @@
         h3 {
             margin: 0 0 12px;
             padding: 0;
+
+            .link-product-item {
+                text-decoration: none;
+                color: #191b29;
+            }
         }
+
         p {
             margin: 0 0 38px;
             padding: 0;
@@ -167,6 +173,9 @@
            float: left;
        }
 
+       &:nth-child(even) .btn-item-danger {
+           background: $dark-bg;
+       }
    }
     .thumb {
         width: 47%;
