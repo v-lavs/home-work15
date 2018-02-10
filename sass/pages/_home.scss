@@ -37,6 +37,7 @@
         @include list-base;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .card {
         width: 33%;
@@ -194,3 +195,53 @@
         }
     }
 }
+
+.team {
+    padding: 67px 0 60px;
+    background: #edeff1;
+    .container-default {
+        padding: 0 5px;
+    }
+    h2 {
+        margin: 0 0 72px;
+        padding: 0;
+        text-align: center;
+    }
+    .team-list {
+        @include list-base;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        .post-item-team {
+            width: 25%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+            .img-member-wrap img {
+                display: block;
+                width: 100%;
+            }
+            .content-member {
+                text-align: center;
+                padding: 15px;
+                background: white;
+                .title-member {
+                    padding: 0;
+                    margin:0 0 13px;
+                    font-family: $secondary-font;
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+}
+

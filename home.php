@@ -42,14 +42,9 @@ get_header(); ?>
                 <?php $args = array('post_type' => 'our_news', 'posts_per_page' => 3);
                 $news = new WP_Query($args);
                 while ($news->have_posts()) : $news->the_post(); ?>
-                    <li class="post-item">
-                        <div class="img-wrap">
-                            <?php the_post_thumbnail('full') ?>
-                        </div>
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <p><?php the_excerpt(); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="btn btn-section-news">Read more</a>
-                    </li>
+
+                  <?php get_template_part('template-parts/content-news', 'our_news'); ?>
+
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
             </ul>
@@ -75,33 +70,33 @@ get_header(); ?>
 <section class="product-details">
     <div class="container">
         <ul class="list-product-item">
-            <?php $args = array('post_type' => 'inform_post', 'post_per_page' => 2);
+            <?php $args = array('post_type' => 'inform_post', 'posts_per_page' => 2,);
             $inform = new WP_Query($args);
             while ($inform->have_posts()) : $inform->the_post(); ?>
-            <li class="clearfix">
-                <div class="thumb">
-                    <?php
-                    $video = get_field('video');
-                    if ( $video ){ ?>
-                        <video controls src="<?php echo $video['url']; ?>"></video>
-                    <?php } elseif (get_the_post_thumbnail()) {
-                     the_post_thumbnail('full');}
-                    ?>
 
-                </div>
-                <div class="product-item">
-                    <h3 class="title-product-item"><a class="link-product-item" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <p>Nam accumsan nunc sit amet elementum sollicitudin. Integer vel lacus eget
-                        tortor lobortis tincidunt sed eu dolor. Phasellus cursus augue ac pulvinar cursus.</p>
-                    <p>
-                        Quisque ut erat ornare, feugiat turpis a, fringilla felis. Nulla molestie lorem et orci
-                        sagittis, et accumsan ex porta.</p>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-item-danger">Sign up</a>
-                </div>
-            </li>
+              <?php  get_template_part('template-parts/content-information', 'inform_post'); ?>
+
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>
         </ul>
+    </div>
+</section>
+
+<section class="team">
+    <div class="container container-default">
+        <h2>Our team</h2>
+        <div class="post-list-team">
+            <ul class="team-list">
+                <?php $args = array('post_type' => ' our_team', 'posts_per_page' => 4,);
+                $team = new WP_Query($args);
+                while ($team->have_posts()) : $team->the_post(); ?>
+
+                       <?php get_template_part('template-parts/content-our-team', 'our_team'); ?>
+
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+            </ul>
+        </div>
     </div>
 </section>
 

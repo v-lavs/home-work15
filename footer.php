@@ -19,7 +19,7 @@
 
             <ul class="link-item-list">
 
-                <?php $args = array('post_type' => 'post', 'nopaging' => true);
+                <?php $args = array('post_type' => 'post', 'posts_per_page' => 7);
                 $the_query = new WP_Query($args);
                 while ($the_query->have_posts()) : $the_query->the_post(); ?>
                     <li>
@@ -31,7 +31,7 @@
             </ul>
             <ul class="link-item-list">
 
-                <?php $args = array('post_type' => 'our_news', 'nopaging' => true);
+                <?php $args = array('post_type' => 'our_news', 'posts_per_page' => 7);
                 $news = new WP_Query($args);
                 while ($news->have_posts()) : $news->the_post(); ?>
                     <li>
@@ -43,7 +43,7 @@
             </ul>
             <ul class="link-item-list">
 
-                <?php $args = array('post_type' => 'inform_post', 'nopaging' => true);
+                <?php $args = array('post_type' => 'inform_post', 'posts_per_page' => 7);
                 $inform = new WP_Query($args);
                 while ($inform->have_posts()) : $inform->the_post(); ?>
                     <li>

@@ -11,13 +11,21 @@ get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
-
+<div class="container">
             <?php
-            while (have_posts()) : the_post();
+            while (have_posts()) : the_post();?>
 
-                get_template_part('template-parts/content', get_post_type());
+                <article class="post-single">
+                    <div class="card">
+                        <div class="box-img">
+                            <?php the_post_thumbnail('full', 'class=round-img'); ?>
+                        </div>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <p><?php the_content(); ?></p>
+                    </div>
+                </article>
 
-                the_post_navigation();
+                <?php the_post_navigation();
 
                 // If comments are open or we have at least one comment, load up the comment template.
                 if (comments_open() || get_comments_number()) :
@@ -26,7 +34,7 @@ get_header(); ?>
 
             endwhile; // End of the loop.
             ?>
-
+</div>
         </main><!-- #main -->
     </div><!-- #primary -->
 

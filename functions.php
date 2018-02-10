@@ -126,9 +126,11 @@ add_action( 'widgets_init', 'panakeia_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
+ *
  */
 function panakeia_scripts() {
     wp_enqueue_style( 'panakeia-style', get_stylesheet_uri() );
+
 
     //    my fonts
     wp_enqueue_style('RobotoSlab', 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
